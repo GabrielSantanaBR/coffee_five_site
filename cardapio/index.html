@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cardápio Coffee Five: cafés especiais, tea café, refrescantes, comidinhas, docinhos e drinks." />
+    <meta name="theme-color" content="#241711" />
+    <meta property="og:title" content="Cardápio | Coffee Five" />
+    <meta property="og:description" content="Escolha seu café, tea café, doce, comidinha ou drink na Coffee Five." />
+    <meta property="og:image" content="https://coffeefive.com.br/wp-content/uploads/2025/06/img_slide_Home01-KNVSER2.jpg" />
+    <link rel="icon" href="https://coffeefive.com.br/wp-content/uploads/2025/06/loga-cafe-1536x1281.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <title>Cardápio | Coffee Five</title>
+  </head>
+  <body class="page-menu" data-page="menu" data-base="..">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header site-header-menu" data-header>
+      <div class="utility-bar">
+        <a href="https://maps.google.com/?q=R.+da+Quitanda,+86+-+quiosque+01+-+Centro,+Rio+de+Janeiro+-+RJ" target="_blank" rel="noreferrer" class="utility-address">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12A7 7 0 0 0 5 9c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.35"/></svg>
+          <span>R. da Quitanda, 86 · quiosque 01 · Centro, Rio de Janeiro</span>
+        </a>
+        <span class="utility-hours">Seg–Sex · 9h às 18h30</span>
+      </div>
+      <div class="nav-shell">
+        <a class="brand" href="../" aria-label="Coffee Five — página inicial"><img src="https://coffeefive.com.br/wp-content/uploads/2025/06/loga-cafe-1536x1281.webp" alt="Coffee Five" /></a>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span></button>
+        <nav class="primary-nav" id="site-navigation" aria-label="Navegação principal">
+          <a href="../">Início</a>
+          <a href="../#sobre">A Coffee Five</a>
+          <a class="is-active" href="./">Cardápio</a>
+          <a href="../#escola">Escola</a>
+          <a href="../#contato">Contato</a>
+        </nav>
+        <a class="header-cta" href="#cardapio"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10h12v5.5A4.5 4.5 0 0 1 10.5 20h-3A4.5 4.5 0 0 1 3 15.5V10Z"/><path d="M15 11h1.5a3 3 0 0 1 0 6H15"/><path d="M6.5 6.5c0-1 .7-1.3.7-2.5M10 6.5c0-1 .7-1.3.7-2.5"/><path d="M3 22h14"/></svg><span>Escolher agora</span></a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="menu-hero" aria-labelledby="menu-title">
+        <div class="menu-hero-backdrop" aria-hidden="true"></div>
+        <div class="container menu-hero-content reveal">
+          <p class="eyebrow eyebrow-light">Coffee Five · Rua da Quitanda</p>
+          <h1 id="menu-title">O que você quer <em>sentir hoje?</em></h1>
+          <p>Do primeiro espresso do dia ao último drink da noite: encontre o seu momento no nosso cardápio.</p>
+          <a href="#cardapio" class="menu-scroll-link">Explorar opções <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="menu-toolbar" id="cardapio" aria-label="Filtrar cardápio">
+        <div class="container toolbar-layout">
+          <div class="toolbar-intro">
+            <p class="eyebrow">Cardápio Coffee Five</p>
+            <h2>Escolha pelo <em>seu momento.</em></h2>
+          </div>
+          <label class="menu-search">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 4.2 4.2"/></svg>
+            <input id="menuSearch" type="search" autocomplete="off" placeholder="Buscar no cardápio" aria-label="Buscar no cardápio" />
+          </label>
+        </div>
+        <div class="container filter-row" id="menuFilters" aria-label="Categorias do cardápio"></div>
+      </section>
+
+      <section class="menu-catalogue section-space-small" aria-live="polite">
+        <div class="container">
+          <div id="menuCatalogue"></div>
+          <div class="menu-empty" id="menuEmpty" hidden>
+            <span>☕</span><h2>Nada encontrado.</h2><p>Tente buscar outro nome ou escolha uma categoria diferente.</p><button type="button" id="clearSearch">Limpar busca</button>
+          </div>
+          <p class="menu-disclaimer">Preços e disponibilidade podem variar no balcão. Para dúvidas sobre ingredientes, opções vegetais ou pedidos, fale com nossos baristas.</p>
+        </div>
+      </section>
+
+      <section class="menu-cta">
+        <div class="container menu-cta-layout">
+          <div><p class="eyebrow eyebrow-light">Ainda em dúvida?</p><h2>Chega aqui, a gente te ajuda a <em>escolher.</em></h2></div>
+          <a class="button button-accent" href="https://wa.me/5521999103534?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20card%C3%A1pio%20e%20gostaria%20de%20uma%20indica%C3%A7%C3%A3o!" target="_blank" rel="noreferrer">Falar com a Coffee Five <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top"><a class="footer-brand" href="../"><img src="https://coffeefive.com.br/wp-content/uploads/2025/06/loga-cafe-preta-1536x1280.webp" alt="Coffee Five" /></a><p>Café especial, técnica e boas histórias no Centro do Rio.</p><a href="../#contato">Como chegar <span aria-hidden="true">↗</span></a></div>
+      <div class="container footer-bottom"><span>© <span data-current-year>2026</span> Coffee Five. Todos os direitos reservados.</span><a href="https://www.instagram.com/coffeefiverj/" target="_blank" rel="noreferrer">Instagram</a></div>
+    </footer>
+
+    <a class="floating-whatsapp" href="https://wa.me/5521999103534?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20atendimento!" target="_blank" rel="noreferrer" aria-label="Falar com a Coffee Five pelo WhatsApp"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 3.5A11.5 11.5 0 0 0 2.7 17.3L2 22l4.8-1.2A11.5 11.5 0 1 0 20.5 3.5Z"/><path d="M8.2 6.9c-.3-.7-.6-.7-.9-.7h-.7c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.8s1.1 3.3 1.3 3.5c.2.2 2.2 3.5 5.4 4.8 2.6 1 3.2.8 3.8.8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.7-.4l-2.1-1c-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.2-1.9-2.5-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6 0-.2 0-.4-.1-.6l-1-2.4Z"/></svg></a>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
