@@ -106,7 +106,7 @@
     video.playsInline = true;
     video.preload = "metadata";
     video.poster = "https://coffeefive.com.br/wp-content/uploads/2025/06/img_slide_Home01-KNVSER2.jpg";
-    video.src = "./assets/hero-coffee-five.mp4";
+    video.src = "./assets/coffee-five-hero.mp4";
     video.addEventListener("error", () => video.remove(), { once: true });
     video.addEventListener("canplay", () => hero.classList.add("has-cf5-video"), { once: true });
     hero.prepend(video);
