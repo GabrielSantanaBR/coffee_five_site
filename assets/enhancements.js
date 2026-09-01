@@ -24,6 +24,7 @@
       .hero.has-cf5-video::after { background:linear-gradient(90deg,rgba(34,20,12,.92) 0%,rgba(34,20,12,.72) 38%,rgba(34,20,12,.22) 76%,rgba(34,20,12,.46) 100%),linear-gradient(0deg,rgba(24,15,10,.45),transparent 50%); content:""; inset:0; pointer-events:none; position:absolute; z-index:1; }
       .hero.has-cf5-video .hero-layout, .hero.has-cf5-video .hero-scroll { z-index:2; }
       .world-card img.cf5-image-fixed { object-fit:cover; }
+      .about-images img.cf5-about-image { object-fit:cover; }
       @media (max-width: 900px) {
         .cf5-language { margin: 10px 0 0; }
         .cf5-language select { width:100%; }
@@ -95,6 +96,21 @@
     });
   };
 
+  const replaceIrrelevantAboutImages = () => {
+    const primary = document.querySelector(".about-image-primary img");
+    const secondary = document.querySelector(".about-image-secondary img");
+    if (primary) {
+      primary.src = "https://coffeefive.com.br/wp-content/uploads/2025/06/img_slide_Home01-KNVSER2.jpg";
+      primary.alt = "Coffee Five — preparo de café especial";
+      primary.classList.add("cf5-about-image");
+    }
+    if (secondary) {
+      secondary.src = "https://coffeefive.com.br/wp-content/uploads/2025/06/87utj.webp";
+      secondary.alt = "Ambiente da Coffee Five no Centro do Rio";
+      secondary.classList.add("cf5-about-image");
+    }
+  };
+
   const mountHeroVideo = () => {
     const hero = document.querySelector(".hero");
     if (!hero || document.querySelector(".cf5-hero-video")) return;
@@ -115,5 +131,6 @@
   ensureStyles();
   mountLanguageSelector();
   fixBrokenWorldImages();
+  replaceIrrelevantAboutImages();
   mountHeroVideo();
 })();
