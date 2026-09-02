@@ -20,11 +20,76 @@
       .cf5-hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0; filter:saturate(.96) contrast(1.03) brightness(.86); transform:scale(1.015); }
       .hero.has-cf5-video::after { background:linear-gradient(90deg,rgba(34,20,12,.92) 0%,rgba(34,20,12,.72) 38%,rgba(34,20,12,.22) 76%,rgba(34,20,12,.46) 100%),linear-gradient(0deg,rgba(24,15,10,.45),transparent 50%); content:""; inset:0; pointer-events:none; position:absolute; z-index:1; }
       .hero.has-cf5-video .hero-layout, .hero.has-cf5-video .hero-scroll { z-index:2; }
-      .world-card img.cf5-image-fixed { object-fit:cover; }
+
+      /* Cards "Também é Coffee Five": mais área útil sem cortar as fotos. */
+      .five-world .container { width:min(1260px, calc(100% - 48px)); }
+      .five-world .world-grid { gap:22px; }
+      .five-world .world-card {
+        grid-template-columns:48% minmax(0, 1fr);
+        min-height:330px;
+        border:1px solid rgba(54,35,22,.08);
+        box-shadow:0 10px 28px rgba(60,38,19,.07);
+      }
+      .five-world .world-card > img,
+      .five-world .world-card img.cf5-image-fixed {
+        width:100%;
+        height:330px;
+        min-height:330px;
+        padding:10px;
+        background:linear-gradient(145deg,#eee3d1,#e6d8c2);
+        object-fit:contain;
+        object-position:center;
+        image-rendering:auto;
+      }
+      .five-world .world-card > div { padding:30px 22px; }
+      .five-world .world-card h3 { font-size:27px; }
+      .five-world .world-card p { font-size:12.5px; }
+
       .about-images img.cf5-about-image { object-fit:cover; }
+
+      @media (max-width: 1020px) {
+        .five-world .world-card { grid-template-columns:1fr; min-height:0; }
+        .five-world .world-card > img,
+        .five-world .world-card img.cf5-image-fixed {
+          width:100%;
+          height:auto;
+          min-height:0;
+          max-height:320px;
+          aspect-ratio:4 / 3;
+          object-fit:contain;
+        }
+        .five-world .world-card > div { min-height:205px; }
+      }
+
       @media (max-width: 900px) {
         .cf5-language { margin: 10px 0 0; width:100%; }
         .cf5-language select { width:100%; }
+      }
+
+      @media (max-width: 780px) {
+        .five-world .container { width:min(100% - 32px, 1180px); }
+        .five-world .world-card { grid-template-columns:44% minmax(0,1fr); min-height:250px; }
+        .five-world .world-card > img,
+        .five-world .world-card img.cf5-image-fixed {
+          height:250px;
+          min-height:250px;
+          max-height:none;
+          aspect-ratio:auto;
+          padding:8px;
+        }
+        .five-world .world-card > div { min-height:0; padding:22px 20px; }
+      }
+
+      @media (max-width: 520px) {
+        .five-world .world-card { grid-template-columns:1fr; }
+        .five-world .world-card > img,
+        .five-world .world-card img.cf5-image-fixed {
+          height:auto;
+          min-height:0;
+          aspect-ratio:4 / 3;
+          padding:8px;
+        }
+        .five-world .world-card > div { padding:20px; }
       }
     `;
     document.head.appendChild(style);
