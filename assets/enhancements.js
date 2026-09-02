@@ -146,10 +146,7 @@
         media.style.setProperty("--media-image", `url(\"${img.currentSrc || img.src}\")`);
       };
 
-      img.addEventListener("load", refreshBackdrop);
-      refreshBackdrop();
-
-      img.addEventListener("error", () => {
+      const applyFallback = () => {
         if (img.dataset.cf5FallbackApplied) return;
         img.dataset.cf5FallbackApplied = "1";
 
@@ -158,7 +155,13 @@
         } else if (img.src.includes("five-roasters-torrefacao.webp") || img.src.includes("Imagem-do-WhatsApp-de-2025-07-04")) {
           img.src = ROASTER_FALLBACK;
         }
-      });
+      };
+
+      img.addEventListener("load", refreshBackdrop);
+      img.addEventListener("error", applyFallback);
+      refreshBackdrop();
+
+      if (img.complete && img.naturalWidth === 0) applyFallback();
     });
   };
 
