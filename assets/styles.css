@@ -158,14 +158,15 @@ h2 { font-size: clamp(40px, 4.4vw, 68px); font-weight: 600; margin-bottom: 24px;
 /* World */
 .five-world { background: #f4ead8; }
 .world-grid { display: grid; gap: 18px; grid-template-columns: repeat(3,1fr); }
-.world-card { background: var(--white); display: grid; grid-template-columns: 42% 1fr; min-height: 297px; overflow: hidden; }
+.world-card { background: var(--white); color: var(--ink); display: grid; grid-template-columns: 42% 1fr; min-height: 297px; overflow: hidden; transition: box-shadow .2s ease, transform .2s ease; }
+.world-card:hover { box-shadow: 0 14px 30px rgba(60, 38, 19, .13); transform: translateY(-3px); }
 .world-card > img { height: 100%; min-height: 297px; object-fit: cover; width: 100%; }
 .world-card > div { display: flex; flex-direction: column; padding: 26px 20px; }
 .world-card span { color: var(--orange); font-size: 11px; font-weight: 700; }
 .world-card h3 { font-family: var(--display); font-size: 25px; font-weight: 600; letter-spacing: -.05em; margin: 22px 0 10px; }
 .world-card p { color: var(--ink-soft); font-size: 12px; line-height: 1.6; margin-bottom: 22px; }
-.world-card a { color: var(--teal-dark); font-size: 11px; font-weight: 700; letter-spacing: .07em; margin-top: auto; text-transform: uppercase; }
-.world-card a b { color: var(--orange); font-size: 18px; margin-left: 4px; }
+.world-card .world-card-action { color: var(--teal-dark); font-size: 11px; font-weight: 700; letter-spacing: .07em; margin-top: auto; text-transform: uppercase; }
+.world-card .world-card-action b { color: var(--orange); font-size: 18px; margin-left: 4px; }
 
 /* School */
 .school { background: #2a1b13; color: var(--white); overflow: hidden; position: relative; }
