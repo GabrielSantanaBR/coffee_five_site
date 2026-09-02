@@ -124,8 +124,8 @@
     const primary = document.querySelector(".about-image-primary img");
     const secondary = document.querySelector(".about-image-secondary img");
     if (primary) {
-      primary.src = "https://coffeefive.com.br/wp-content/uploads/2025/06/img_slide_Home01-KNVSER2.jpg";
-      primary.alt = "Coffee Five — preparo de café especial";
+      primary.src = "./assets/five-roasters-torrefacao.webp";
+      primary.alt = "Torrefação Five Roasters e cafés especiais";
       primary.classList.add("cf5-about-image");
     }
     if (secondary) {
