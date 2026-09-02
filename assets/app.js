@@ -102,11 +102,11 @@
     { category: "cafes", name: "Mocaccino", price: "23,00", description: "Base de chocolate ou caramelo, leite vaporizado e café.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Mocaccino-1-1536x2048.webp" },
     { category: "cafes", name: "Café Filtrado", price: "16,00", description: "Grãos sazonais. Pergunte ao nosso barista. Não fracionamos.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Filtrado-1536x2048.jpg" },
     { category: "cafes", name: "O Chocolate", price: "17,00", description: "Chocolate nobre, com leite e creme de leite fresco para dar um toque de cremosidade.", image: "https://coffeefive.com.br/wp-content/uploads/2025/07/O-chocolate-1536x2048.jpg" },
-    { category: "cafes", name: "Flat", price: "18,00", description: "Cortado com uma dose dupla curta de espresso e leite levemente vaporizado (integral ou vegetal).", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Flat-white-1536x2048.jpg" },
+    { category: "cafes", name: "Cortado do Five", price: "18,00", description: "Dose dupla curta de espresso com leite levemente vaporizado (leite integral ou vegetal).", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Flat-white-1536x2048.jpg" },
 
     { category: "refrescantes", name: "Espresso Tônica", price: "20,00", description: "Espresso com água tônica Schweppes e gelo.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Espresso-tonica.jpg" },
     { category: "refrescantes", name: "Iced Coffee", price: "17,00", description: "Café filtrado sobre gelo.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/2-1536x2048.jpg" },
-    { category: "refrescantes", name: "Latte", price: "18,00", description: "Gelo, leite e café espresso gelado cremoso (leite integral ou vegetal).", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/3.jpg" },
+    { category: "refrescantes", name: "Iced Latte", price: "18,00", description: "Gelo, leite e café espresso gelado cremoso (leite integral ou vegetal).", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/3.jpg" },
     { category: "refrescantes", name: "Iced Vibes", price: "21,00", description: "Gelo, leite e espresso cremoso com uma base à escolha: avelã, baunilha, caramelo ou coco.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/3.jpg" },
     { category: "refrescantes", name: "Água", price: "6,00", description: "Com ou sem gás.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Agua-que-usamos-1536x2048.webp" },
     { category: "refrescantes", name: "Água de Coco", price: "12,00", description: "Marca: Coco Legal.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Agua-de-Coco-1536x2048.webp" },
@@ -134,11 +134,15 @@
     { category: "docinhos", name: "Brigadeiro", price: "9,00", description: "Diversos sabores de pequena alegria. Pergunte aos baristas.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/brigadeiros-scaled.webp" },
     { category: "docinhos", name: "Cookie", price: "13,00", description: "Mix de chocolate.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/WhatsApp-Image-2026-05-27-at-10.02.13-e1779887057391.jpeg" },
     { category: "docinhos", name: "Bolos Especiais", price: "30,00", description: "A cada dia, um bolo diferente para adoçar a sua pausa.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/nos-bolos-scaled.webp" },
-    { category: "docinhos", name: "Cheesecake", price: "25,00", description: "Geleia de goiabada ou morango.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Cheesecake-scaled.webp" },
-    { category: "docinhos", name: "Banana Bread", price: "18,00", description: "Bolo de banana, baunilha natural, iogurte, canela e chips de chocolate 70%.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/IMG_2962-scaled.jpg" },
+    { category: "docinhos", name: "Cheesecake", price: "25,00", description: "Geleia de goiabada ou frutas vermelhas.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Cheesecake-scaled.webp" },
+    { category: "docinhos", name: "Pão de Mel", price: "14,00", description: "Produzido pela Santo Favo. Caramelo salgado ou nozes com doce de leite.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/brigadeiros-scaled.webp" },
+    { category: "docinhos", name: "Banoffee", price: "25,00", description: "Clássica banoffee brasileira: base de biscoito amanteigado, doce de leite, bananas, chantilly e canela polvilhada.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Cheesecake-scaled.webp" },
 
     { category: "comidinhas", name: "Misto", price: "20,00", description: "Queijo minas curado, presunto e cream cheese no pão Petrópolis.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Pastel-frango-e-palmito-scaled.webp" },
     { category: "comidinhas", name: "Pão de Queijo", price: "14,00", description: "Tapioca e queijo parmesão. Porção com 5 unidades.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Pao-de-queijo-1536x2048.webp" },
+    { category: "comidinhas", name: "Toast c/ Ovos Mexidos", price: "25,00", description: "Pão sourdough com ovos cremosos, queijo e bacon decorado.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Pao-de-queijo-1536x2048.webp" },
+    { category: "comidinhas", name: "Queijo Quente", price: "20,00", description: "Queijo quente feito com queijo minas curado e cream cheese no pão brioche.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Pastel-frango-e-palmito-scaled.webp" },
+    { category: "comidinhas", name: "Croissant", price: "18,00", description: "Escolha até 3 acompanhamentos: manteiga, geleia, cream cheese ou mel.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Pao-de-queijo-1536x2048.webp" },
 
     { category: "drinks", group: "Irish Coffee", name: "Jameson", price: "38,00", description: "White.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Irish-Coffee-Jameson-scaled.webp", alcohol: true },
     { category: "drinks", group: "Irish Coffee", name: "Glenfiddich", price: "60,00", description: "12 anos.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Irish-Coffee-Glenfiddich-scaled.webp", alcohol: true },
@@ -151,9 +155,8 @@
     { category: "drinks", group: "Martinis do Five", name: "Espresso Martini", price: "42,00", description: "Vodka, espresso duplo curto, licor de café e xarope de caramelo.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/Espresso-Martini.webp", alcohol: true },
     { category: "drinks", group: "Drinks", name: "White Russian", price: "42,00", description: "Vodka, licor de café e creme de leite.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/WhatsApp-Image-2026-05-28-at-17.14.58.jpeg", alcohol: true },
     { category: "drinks", group: "Drinks", name: "Espresso Sour", price: "40,00", description: "Whisky, mel, limão e espresso.", image: "https://coffeefive.com.br/wp-content/uploads/2025/06/WhatsApp-Image-2026-05-28-at-17.36.40-e1780001345373.jpeg", alcohol: true },
-    { category: "drinks", group: "Drinks", name: "Mrs Black 2.0", price: "40,00", description: "Releitura do drink campeão de 2020: licor de chocolate, licor de café, rum e duplo curto.", image: "https://coffeefive.com.br/wp-content/uploads/2026/01/WhatsApp-Image-2026-05-22-at-16.02.391.jpg", alcohol: true },
-    { category: "drinks", group: "Drinks", name: "Florin", price: "21,00", description: "Refrigerante de café com gengibre, mix de limão, mel e espresso. Pode adicionar gin + R$ 10.", image: "https://coffeefive.com.br/wp-content/uploads/2025/08/Florin-scaled.jpg", alcohol: true },
-    { category: "drinks", group: "Drinks", name: "La Cura", price: "26,00", description: "Mocktail autoral de Yasmim: espresso, gengibre, lemonade, hortelã e mel. Pode adicionar cachaça + R$ 6.", image: "https://coffeefive.com.br/wp-content/uploads/2026/01/WhatsApp-Image-2026-05-22-at-16.02.391.jpg", alcohol: true }
+    { category: "drinks", group: "Drinks", name: "Florin", price: "21,00", description: "Refrigerante de café com gengibre, mix de limão, mel e espresso. Pode adicionar gin + R$ 10.", image: "https://coffeefive.com.br/wp-content/uploads/2025/08/Florin-scaled.jpg" },
+    { category: "drinks", group: "Drinks", name: "La Cura", price: "26,00", description: "Mocktail autoral de Yasmim: espresso, gengibre, lemonade, hortelã e mel. Pode adicionar cachaça + R$ 6.", image: "https://coffeefive.com.br/wp-content/uploads/2026/01/WhatsApp-Image-2026-05-22-at-16.02.391.jpg" }
   ];
 
   const filtersNode = document.getElementById("menuFilters");
