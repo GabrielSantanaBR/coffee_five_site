@@ -8,6 +8,9 @@
     ["it", "Italiano"]
   ];
 
+  const SCHOOL_FALLBACK = "https://coffeefive.com.br/wp-content/uploads/elementor/thumbs/Coffee-Five-101-pc3uqiwr8wp4tai2bbdrlyu43r0ebkoip0qnpiwwjg.jpg";
+  const ROASTER_FALLBACK = "https://coffeefive.com.br/wp-content/uploads/2025/07/Imagem-do-WhatsApp-de-2025-07-04-as-16.51.47_f5ea9e16-scaled.webp";
+
   const ensureStyles = () => {
     if (document.getElementById("cf5-enhancement-styles")) return;
     const style = document.createElement("style");
@@ -21,75 +24,87 @@
       .hero.has-cf5-video::after { background:linear-gradient(90deg,rgba(34,20,12,.92) 0%,rgba(34,20,12,.72) 38%,rgba(34,20,12,.22) 76%,rgba(34,20,12,.46) 100%),linear-gradient(0deg,rgba(24,15,10,.45),transparent 50%); content:""; inset:0; pointer-events:none; position:absolute; z-index:1; }
       .hero.has-cf5-video .hero-layout, .hero.has-cf5-video .hero-scroll { z-index:2; }
 
-      /* Cards "Também é Coffee Five": mais área útil sem cortar as fotos. */
+      /* Cards "Também é Coffee Five": imagem inteira sem criar grandes vazios. */
       .five-world .container { width:min(1260px, calc(100% - 48px)); }
-      .five-world .world-grid { gap:22px; }
+      .five-world .world-grid { gap:20px; }
       .five-world .world-card {
-        grid-template-columns:48% minmax(0, 1fr);
-        min-height:330px;
+        grid-template-columns:minmax(0, 48%) minmax(0, 52%);
+        min-height:310px;
         border:1px solid rgba(54,35,22,.08);
-        box-shadow:0 10px 28px rgba(60,38,19,.07);
+        box-shadow:0 12px 30px rgba(60,38,19,.08);
+        background:var(--white);
       }
-      .five-world .world-card > img,
-      .five-world .world-card img.cf5-image-fixed {
+      .five-world .world-card-media {
+        position:relative;
+        min-width:0;
+        min-height:310px;
+        overflow:hidden;
+        isolation:isolate;
+        background:#e7dac5;
+      }
+      .five-world .world-card-media::before {
+        content:"";
+        position:absolute;
+        inset:-24px;
+        z-index:-2;
+        background-image:var(--media-image);
+        background-size:cover;
+        background-position:center;
+        filter:blur(20px) saturate(.86) brightness(.88);
+        transform:scale(1.08);
+        opacity:.48;
+      }
+      .five-world .world-card-media::after {
+        content:"";
+        position:absolute;
+        inset:0;
+        z-index:-1;
+        background:linear-gradient(145deg,rgba(244,234,216,.20),rgba(37,24,17,.10));
+      }
+      .five-world .world-card-media > img {
         width:100%;
-        height:330px;
-        min-height:330px;
-        padding:10px;
-        background:linear-gradient(145deg,#eee3d1,#e6d8c2);
+        height:310px;
         object-fit:contain;
         object-position:center;
+        padding:8px;
+        filter:drop-shadow(0 6px 14px rgba(37,24,17,.12));
         image-rendering:auto;
       }
-      .five-world .world-card > div { padding:30px 22px; }
+      .five-world .world-card > div:not(.world-card-media) { padding:30px 22px; }
       .five-world .world-card h3 { font-size:27px; }
       .five-world .world-card p { font-size:12.5px; }
 
       .about-images img.cf5-about-image { object-fit:cover; }
 
       @media (max-width: 1020px) {
-        .five-world .world-card { grid-template-columns:1fr; min-height:0; }
-        .five-world .world-card > img,
-        .five-world .world-card img.cf5-image-fixed {
-          width:100%;
-          height:auto;
-          min-height:0;
-          max-height:320px;
-          aspect-ratio:4 / 3;
-          object-fit:contain;
+        .five-world .world-grid { grid-template-columns:1fr; }
+        .five-world .world-card {
+          grid-template-columns:minmax(240px, 42%) minmax(0, 1fr);
+          min-height:270px;
         }
-        .five-world .world-card > div { min-height:205px; }
+        .five-world .world-card-media { min-height:270px; }
+        .five-world .world-card-media > img { height:270px; }
+        .five-world .world-card > div:not(.world-card-media) { min-height:0; padding:26px 24px; }
       }
 
       @media (max-width: 900px) {
-        .cf5-language { margin: 10px 0 0; width:100%; }
+        .cf5-language { margin:10px 0 0; width:100%; }
         .cf5-language select { width:100%; }
       }
 
-      @media (max-width: 780px) {
+      @media (max-width: 650px) {
         .five-world .container { width:min(100% - 32px, 1180px); }
-        .five-world .world-card { grid-template-columns:44% minmax(0,1fr); min-height:250px; }
-        .five-world .world-card > img,
-        .five-world .world-card img.cf5-image-fixed {
-          height:250px;
-          min-height:250px;
-          max-height:none;
-          aspect-ratio:auto;
-          padding:8px;
-        }
-        .five-world .world-card > div { min-height:0; padding:22px 20px; }
-      }
-
-      @media (max-width: 520px) {
-        .five-world .world-card { grid-template-columns:1fr; }
-        .five-world .world-card > img,
-        .five-world .world-card img.cf5-image-fixed {
-          height:auto;
+        .five-world .world-card { grid-template-columns:1fr; min-height:0; }
+        .five-world .world-card-media {
           min-height:0;
           aspect-ratio:4 / 3;
-          padding:8px;
         }
-        .five-world .world-card > div { padding:20px; }
+        .five-world .world-card-media > img {
+          height:100%;
+          min-height:0;
+          padding:7px;
+        }
+        .five-world .world-card > div:not(.world-card-media) { padding:22px 20px 24px; }
       }
     `;
     document.head.appendChild(style);
@@ -116,14 +131,32 @@
     });
   };
 
-  const fixBrokenWorldImages = () => {
-    document.querySelectorAll("img").forEach((img) => {
+  const enhanceWorldCards = () => {
+    document.querySelectorAll(".world-card").forEach((card) => {
+      if (card.querySelector(".world-card-media")) return;
+      const img = card.querySelector(":scope > img");
+      if (!img) return;
+
+      const media = document.createElement("div");
+      media.className = "world-card-media";
+      card.insertBefore(media, img);
+      media.appendChild(img);
+
+      const refreshBackdrop = () => {
+        media.style.setProperty("--media-image", `url(\"${img.currentSrc || img.src}\")`);
+      };
+
+      img.addEventListener("load", refreshBackdrop);
+      refreshBackdrop();
+
       img.addEventListener("error", () => {
-        if (img.dataset.cf5Fixed) return;
-        if (img.src.includes("Imagem-do-WhatsApp-de-2025-07-04")) {
-          img.dataset.cf5Fixed = "1";
-          img.src = "https://coffeefive.com.br/wp-content/uploads/2025/06/87utj.webp";
-          img.classList.add("cf5-image-fixed");
+        if (img.dataset.cf5FallbackApplied) return;
+        img.dataset.cf5FallbackApplied = "1";
+
+        if (img.src.includes("coffee-five-escola.webp")) {
+          img.src = SCHOOL_FALLBACK;
+        } else if (img.src.includes("five-roasters-torrefacao.webp") || img.src.includes("Imagem-do-WhatsApp-de-2025-07-04")) {
+          img.src = ROASTER_FALLBACK;
         }
       });
     });
@@ -162,7 +195,7 @@
 
   ensureStyles();
   mountLanguageSelector();
-  fixBrokenWorldImages();
+  enhanceWorldCards();
   replaceIrrelevantAboutImages();
   mountHeroVideo();
 })();
