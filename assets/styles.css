@@ -74,10 +74,10 @@ h2 { font-size: clamp(40px, 4.4vw, 68px); font-weight: 600; margin-bottom: 24px;
 
 /* Hero */
 .hero { background: var(--ink); color: var(--white); min-height: 650px; overflow: hidden; position: relative; }
-.hero-backdrop { background-image: linear-gradient(90deg, rgba(34,20,12,.96) 0%, rgba(34,20,12,.84) 37%, rgba(34,20,12,.26) 75%, rgba(34,20,12,.52) 100%), url("https://coffeefive.com.br/wp-content/uploads/2025/06/img_slide_Home01-KNVSER2.jpg"); background-position: center; background-size: cover; inset: 0; opacity: .92; position: absolute; }
+.hero-backdrop { background: linear-gradient(90deg, rgba(34,20,12,.96) 0%, rgba(34,20,12,.84) 37%, rgba(34,20,12,.26) 75%, rgba(34,20,12,.52) 100%); inset: 0; opacity: .92; position: absolute; }
 .hero-backdrop::after { background: radial-gradient(circle at 73% 44%, rgba(90,167,155,.28), transparent 26%), linear-gradient(0deg, rgba(24,15,10,.52), transparent 35%); content: ""; inset: 0; position: absolute; }
 .hero-grain { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E"); inset: 0; mix-blend-mode: soft-light; opacity: .3; pointer-events: none; position: absolute; }
-.hero-layout { align-items: center; display: grid; gap: 58px; grid-template-columns: minmax(0, .95fr) minmax(340px, .78fr); min-height: 650px; padding: 72px 0 92px; position: relative; }
+.hero-layout { align-items: center; display: flex; min-height: 650px; padding: 72px 0 92px; position: relative; }
 .hero-copy { max-width: 620px; z-index: 1; }
 .hero-copy h1 { color: var(--cream); font-size: clamp(51px, 5.7vw, 86px); font-weight: 600; margin: 0 0 24px; }
 .hero-copy h1 span { color: #f5d2a2; display: block; }
@@ -314,12 +314,6 @@ h2 { font-size: clamp(40px, 4.4vw, 68px); font-weight: 600; margin-bottom: 24px;
   .hero-layout { display: block; min-height: auto; padding: 72px 0 108px; }
   .hero-copy h1 { font-size: clamp(47px, 13.5vw, 67px); }
   .hero-text { font-size: 15px; }
-  .hero-visual { height: 280px; margin: 47px 0 0 8px; min-height: 0; }
-  .hero-image-main { height: 85%; width: 79%; }
-  .hero-image-float { border-width: 5px; height: 42%; width: 42%; }
-  .hero-stamp { height: 83px; right: -10px; width: 83px; }
-  .hero-stamp strong { font-size: 17px; }
-  .hero-stamp span { font-size: 7px; }
   .hero-scroll { bottom: 24px; left: 16px; }
   .trust-grid { grid-template-columns: repeat(2,1fr); padding: 9px 0; }
   .trust-grid p { border: 0; margin: 11px 0; padding: 0 10px; }
@@ -384,7 +378,6 @@ h2 { font-size: clamp(40px, 4.4vw, 68px); font-weight: 600; margin-bottom: 24px;
   .utility-address span { width: 88vw; }
   .hero-actions { display: grid; grid-template-columns: 1fr; }
   .hero-actions .button { width: 100%; }
-  .hero-image-float { left: -9px; }
   .about-images { height: 353px; }
   .category-grid { grid-template-columns: 1fr; grid-template-rows: repeat(5, 254px) 274px; }
   .category-card-wide { grid-column: auto; }
