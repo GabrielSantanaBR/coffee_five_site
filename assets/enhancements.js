@@ -120,6 +120,7 @@
     });
   };
 
+  // Usa exclusivamente as duas fotos enviadas pelo usuário na seção Sobre nós.
   const replaceIrrelevantAboutImages = () => {
     const primary = document.querySelector(".about-image-primary img");
     const secondary = document.querySelector(".about-image-secondary img");
