@@ -124,13 +124,13 @@
     const primary = document.querySelector(".about-image-primary img");
     const secondary = document.querySelector(".about-image-secondary img");
     if (primary) {
-      primary.src = "./assets/five-roasters-torrefacao.webp";
-      primary.alt = "Torrefação Five Roasters e cafés especiais";
+      primary.src = "./assets/about-latte-art.webp";
+      primary.alt = "Latte art da Coffee Five";
       primary.classList.add("cf5-about-image");
     }
     if (secondary) {
-      secondary.src = "https://coffeefive.com.br/wp-content/uploads/2025/06/87utj.webp";
-      secondary.alt = "Ambiente da Coffee Five no Centro do Rio";
+      secondary.src = "./assets/about-cupping.webp";
+      secondary.alt = "Sessão de cupping e degustação de cafés especiais";
       secondary.classList.add("cf5-about-image");
     }
   };
